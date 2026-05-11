@@ -23,7 +23,7 @@ classifiers = [
 ]
 requires-python = ">=3.9"
 dependencies = [
-    "sqlglot>=28.6.0",
+    "sqlglot>=30.1.0,<31",
 ]
 
 [project.optional-dependencies]
@@ -35,8 +35,8 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://www.@TODO.de"
-Repository = "https://www.@TODO.de"
+Homepage = "https://github.com/Salfiii/ibmdb2-sqlglot-plugin"
+Repository = "https://github.com/Salfiii/ibmdb2-sqlglot-plugin"
 
 [project.entry-points."sqlglot.dialects"]
 ibmdb2 = "ibmdb2_sqlglot.ibmdb2:DB2"

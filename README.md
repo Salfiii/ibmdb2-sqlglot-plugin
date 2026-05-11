@@ -31,9 +31,10 @@ result = sqlglot.transpile("$t = (SELECT id FROM users); SELECT * FROM $t AS t",
 ## Development
 
 ```bash
-git clone @TODO
-cd ibmdb2-sqlglot-plugin
-python -m venv .venv && source .venv/bin/activate
-pip install -e ".[dev]"
-python -m pytest tests/
+uv sync            # install dependencies
+uv run pytest      # run all tests
 ```
+
+## License
+
+APACHE LICENSE 2.0
