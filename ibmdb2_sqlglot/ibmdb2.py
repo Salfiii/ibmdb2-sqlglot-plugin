@@ -3,6 +3,7 @@ from __future__ import annotations
 import typing as t
 
 from sqlglot import exp, generator, tokens, transforms
+from sqlglot.parser import Parser as BaseParser
 from sqlglot.dialects.dialect import (
     Dialect,
     NormalizationStrategy,
@@ -14,7 +15,6 @@ from sqlglot.dialects.dialect import (
     no_pivot_sql,
     no_trycast_sql,
 )
-from sqlglot.parsers.db2 import Db2Parser
 from sqlglot.tokens import TokenType
 
 if t.TYPE_CHECKING:
@@ -100,7 +100,7 @@ class Db2(Dialect):
             "SYSTOOLS": TokenType.SCHEMA,
         }
 
-    Parser = Db2Parser
+    Parser = BaseParser
 
     class Generator(generator.Generator):
         LIMIT_FETCH = "FETCH"
