@@ -1,0 +1,8 @@
+include LICENSE
+include CHANGELOG.md
+include README.md
+prune _uv
+recursive-exclude * __pycache__
+recursive-exclude * *.pyc
+recursive-exclude * *.pyo
+recursive-exclude * *.orig
