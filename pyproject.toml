@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ibmdb2-sqlglot-plugin"
+version = "0.0.1"  # AUTOVERSION
+description = "IBM DB2 dialect plugin for sqlglot"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = ""}
+]
+keywords = ["sql", "sqlglot", "ibm", "db2", "dialect", "parser", "transpiler"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Database",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "sqlglot>=28.6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "ibm-db>=3.2.6,<4",
+    "ruff>=0.9.0",
+]
+
+[project.urls]
+Homepage = "https://www.@TODO.de"
+Repository = "https://www.@TODO.de"
+
+[project.entry-points."sqlglot.dialects"]
+ibmdb2 = "ibmdb2_sqlglot.ibmdb2:DB2"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ibmdb2_sqlglot*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+ignore = ["E501"]
