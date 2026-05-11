@@ -31,6 +31,7 @@ result = sqlglot.transpile("$t = (SELECT id FROM users); SELECT * FROM $t AS t",
 ## Development
 
 ```bash
+## pip install uv # if uv does not exist locally
 uv sync            # install dependencies
 uv run pytest      # run all tests
 ```
