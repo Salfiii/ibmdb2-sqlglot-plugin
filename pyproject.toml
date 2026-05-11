@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ibmdb2-sqlglot-plugin"
-version = "0.0.2"  # AUTOVERSION
+version = "0.0.3"  # AUTOVERSION
 description = "IBM DB2 dialect plugin for sqlglot"
 readme = "README.md"
 license = {text = "Apache-2.0"}
